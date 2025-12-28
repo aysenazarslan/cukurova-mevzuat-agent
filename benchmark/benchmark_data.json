@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "category": "Doktora (Lisansüstü)",
+    "type": "Multi-Hop / Calculation",
+    "question": "Doktora programına lisans derecesi ile kabul edilen bir öğrencinin alması gereken en az kredi sayısı ile yüksek lisans derecesi ile kabul edilenin kredi farkı kaçtır?",
+    "ground_truth": "Lisans derecesi ile kabul edilenler en az 42 kredi (14 ders), yüksek lisans derecesi ile kabul edilenler en az 21 kredi (7 ders) almalıdır. Fark 21 kredidir."
+  },
+  {
+    "id": 2,
+    "category": "Sınav Yönetmeliği (Lisans)",
+    "type": "Logic / Edge Case",
+    "question": "Bir öğrenci ara sınava hastaneye yattığı için girememiştir. Mazeret sınavına girmek için kaç gün içinde başvurmalıdır ve bu sınavdan aldığı not başarısız olursa bütünleme sınavına girebilir mi?",
+    "ground_truth": "Mazeretin bitiminden en geç 5 iş günü içinde başvurmalıdır. Mazeret sınavı 'ara sınav' yerine geçtiği için, dönem sonu başarısız olursa bütünleme sınavına girebilir."
+  },
+  {
+    "id": 3,
+    "category": "Doktora (Lisansüstü)",
+    "type": "Logic / Conditional",
+    "question": "Doktora tez savunma jürisi normalde kaç kişiden oluşur? Eğer ilgili enstitü yönetim kurulu danışmanın oy hakkı olmadığına karar verirse jüri sayısı kaça çıkar?",
+    "ground_truth": "Jüri normalde 5 öğretim üyesinden oluşur. Eğer danışmanın oy hakkı yoksa jüri 6 öğretim üyesinden oluşur."
+  },
+  {
+    "id": 4,
+    "category": "Danışmanlık",
+    "type": "Fact Retrieval",
+    "question": "Bir tezli yüksek lisans programında öğretim üyesi başına düşen tez danışmanlığı kontenjanı en fazla kaçtır ve bu sayı hangi durumda artırılabilir?",
+    "ground_truth": "Tezli yüksek lisans ve doktora için öğretim üyesi başına en fazla 14 öğrenci düşer. Üniversite-sanayi işbirliği protokolü varsa bu kontenjan %50 artırılabilir."
+  },
+  {
+    "id": 5,
+    "category": "Sınav Yönetmeliği (Lisans)",
+    "type": "Calculation",
+    "question": "Örgün öğretimde bir dersin 'Ham Başarı Notu' hesaplanırken dönem içi notunun ve yıl sonu sınavının etkisi yüzde kaçtır? Uzaktan öğretimde bu oranlar değişir mi?",
+    "ground_truth": "Örgün öğretimde: Dönem içi %40, Yıl sonu %60. Uzaktan öğretimde: Dönem içi %20, Yıl sonu %80 olarak hesaplanır."
+  },
+  {
+    "id": 6,
+    "category": "Yüksek Lisans (Lisansüstü)",
+    "type": "Logic / Edge Case",
+    "question": "Tezli yüksek lisans öğrencisi derslerini tamamladı ama genel not ortalaması (GNO) 2.40'ta kaldı. Tez aşamasına geçebilir mi? Ne yapması gerekir?",
+    "ground_truth": "Hayır, geçemez. Tez aşamasına geçmek için GNO en az 2.50 olmalıdır. Ortalamayı yükseltmek için başarılı olduğu dersleri tekrar almalı veya danışman onayıyla yeni dersler almalıdır."
+  },
+  {
+    "id": 7,
+    "category": "Sınav Yönetmeliği (Lisans)",
+    "type": "Logic",
+    "question": "Son sınıf öğrencisiyim, mezuniyet için tek dersim kaldı ancak o dersten devamsızlıktan kaldım (DZ). Tek ders sınavına girebilir miyim?",
+    "ground_truth": "Hayır, giremezsiniz. Tek ders sınavına girebilmek için dersin devam koşulunu daha önce yerine getirmiş olmak gerekir. DZ (Devamsız) notu alanlar bu hakkı kullanamaz."
+  },
+  {
+    "id": 8,
+    "category": "Doktora (Lisansüstü)",
+    "type": "Multi-Hop",
+    "question": "Doktora yeterlik sınavına girmek için yüksek lisans derecesiyle gelen bir öğrenci en geç kaçıncı yarıyılda, lisans derecesiyle gelen en geç kaçıncı yarıyılda bu sınava girmek zorundadır?",
+    "ground_truth": "Yüksek lisans derecesi ile gelenler en geç 5. yarıyılın, lisans derecesi ile gelenler en geç 7. yarıyılın sonuna kadar girmek zorundadır."
+  },
+  {
+    "id": 9,
+    "category": "Sınav Yönetmeliği (Lisans)",
+    "type": "Fact Retrieval",
+    "question": "DC ve DD notları ile ders geçmenin şartı nedir? Hangi durumda bu derslerden başarısız sayılırım?",
+    "ground_truth": "DC ve DD notları 'Koşullu Başarılı' notlardır. Mezuniyet aşamasında Genel Not Ortalaması (GNO) 2.00 veya üzeri ise bu dersler geçilmiş sayılır, altındaysa başarısız sayılır."
+  },
+  {
+    "id": 10,
+    "category": "Danışmanlık",
+    "type": "Logic",
+    "question": "Danışmanım mazereti nedeniyle üniversiteden 6 aylığına ayrıldı. Yeni danışmanım hemen atanır mı yoksa dönmesi mi beklenir?",
+    "ground_truth": "Geçerli mazeretle üniversiteden ayrılan danışmanın yerine, akademik yılın kalan süresi dikkate alınarak geçici veya daimi yeni bir danışman görevlendirilir, beklenmez."
+  },
+  {
+    "id": 11,
+    "category": "Doktora (Lisansüstü)",
+    "type": "Fact Retrieval",
+    "question": "Fen Bilimleri Enstitüsü Mimarlık Anabilim Dalında doktora tez savunmasına girmek için özel bir yayın şartı var mıdır? Varsa nedir?",
+    "ground_truth": "Evet, vardır. Alan indeksi veya ULAKBİM TR dizin kapsamındaki dergilerde en az bir araştırma makalesinin basılmış veya kesin kabul almış olması gerekir."
+  },
+  {
+    "id": 12,
+    "category": "Lisansüstü (Genel)",
+    "type": "Logic / Edge Case",
+    "question": "Tez izleme komitesi (TİK) toplantısında üst üste iki kez başarısız bulunan bir doktora öğrencisinin durumu ne olur?",
+    "ground_truth": "Üst üste iki kez (veya aralıklı üç kez) başarısız bulunan öğrencinin Üniversite ile ilişiği kesilir."
+  },
+  {
+    "id": 13,
+    "category": "Sınav Yönetmeliği (Lisans)",
+    "type": "Calculation",
+    "question": "Bir öğrenci Tıp Fakültesi hariç, 4 yıllık bir lisans programını en fazla kaç yılda bitirmek zorundadır? Yabancı dil hazırlık sınıfı bu süreye dahil midir?",
+    "ground_truth": "Azami süre 7 yıldır. Yabancı dil hazırlık sınıfı bu süreye dahil değildir."
+  },
+  {
+    "id": 14,
+    "category": "Lisansüstü (Genel)",
+    "type": "Logic",
+    "question": "İkinci tez danışmanı atanacaksa, bu kişinin mutlaka üniversite kadrosunda olması gerekir mi? Şartları nedir?",
+    "ground_truth": "Hayır, üniversite kadrosu dışından da atanabilir. Ancak en az doktora/sanatta yeterlik derecesine sahip olması gerekir."
+  },
+  {
+    "id": 15,
+    "category": "Sınav Yönetmeliği (Lisans)",
+    "type": "Fact Retrieval",
+    "question": "Sınavlarda maddi hata olduğunu düşünen bir öğrenci, sonuçlar açıklandıktan sonra kaç gün içinde nereye başvurmalıdır?",
+    "ground_truth": "Sınav sonuçlarının ilanından itibaren en geç 5 iş günü içerisinde bağlı bulunduğu birime (bölüm başkanlığına/dekanlığa) yazılı olarak başvurmalıdır."
+  }
+]

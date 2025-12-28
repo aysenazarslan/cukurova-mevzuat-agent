@@ -1,0 +1,26 @@
+# --- 1. GÜVENLİK (EN ÖNEMLİSİ) ---
+.env
+# API Key'in olduğu dosya. Bunu asla yükleme!
+
+# --- 2. PYTHON GEREKSİZLERİ ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- 3. SANAL ORTAM (VIRTUAL ENV) ---
+# Senin bilgisayarına özel kütüphane klasörleri
+venv/
+.venv/
+env/
+.env/
+
+# --- 4. VERİTABANI VE BÜYÜK DOSYALAR ---
+# ChromaDB klasörü çok yer kaplar ve binary dosyadır.
+# Kullanıcılar "ingest.py" çalıştırıp kendileri oluşturmalı.
+data/chroma_db/
+
+# --- 5. İŞLETİM SİSTEMİ VE EDİTÖR ÇÖPLERİ ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
